@@ -1,0 +1,21 @@
+{
+  "name": "mca2js",
+  "version": "0.0.1",
+  "description": "convert minecraft(tm) .mca region files to JS typed arrays",
+  "main": "index.js",
+  "scripts": {
+    "start": "beefy demo.js"
+  },
+  "repository": "",
+  "author": "@maxogden",
+  "license": "BSD",
+  "dependencies": {
+    "browserify": "~2.12.0",
+    "beefy": "0.0.11",
+    "minecraft-region": "~0.1.3",
+    "minecraft-mca": "~0.4.0"
+  },
+  "devDependencies": {
+    "voxel-crunch": "~0.2.1"
+  }
+}
