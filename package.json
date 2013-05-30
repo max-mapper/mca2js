@@ -1,6 +1,6 @@
 {
   "name": "mca2js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "convert minecraft(tm) .mca region files to JS typed arrays",
   "main": "index.js",
   "scripts": {
