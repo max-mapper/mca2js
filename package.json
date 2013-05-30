@@ -4,7 +4,8 @@
   "description": "convert minecraft(tm) .mca region files to JS typed arrays",
   "main": "index.js",
   "scripts": {
-    "start": "beefy demo.js"
+    "start": "beefy demo.js",
+    "test": "node test.js"
   },
   "repository": "",
   "author": "@maxogden",
