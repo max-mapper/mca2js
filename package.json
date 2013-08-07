@@ -1,13 +1,17 @@
 {
   "name": "mca2js",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "convert minecraft(tm) .mca region files to JS typed arrays",
   "main": "index.js",
   "scripts": {
     "start": "beefy demo.js",
     "test": "node test.js"
   },
-  "repository": "",
+  "keywords": ["voxel", "voxel.js"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxogden/mca2js.git"
+  },
   "author": "@maxogden",
   "license": "BSD",
   "dependencies": {

@@ -35,8 +35,6 @@ MCA2JSON.prototype.convert = function(buf, regionX, regionZ) {
   var self = this
   var region = mcRegion(buf, regionX, regionZ)
   var lastChunk
-  var count = 0
-  function onChunk() { count++ }
   function onVoxel(x, y, z, block, chunkX, chunkZ) {
     var currentChunk = chunkX + ',' + chunkZ
     if (!lastChunk) lastChunk = currentChunk
@@ -46,7 +44,6 @@ MCA2JSON.prototype.convert = function(buf, regionX, regionZ) {
         var cidx = c.join('|')
         var finishedChunk = self.chunks[cidx]
         if (!finishedChunk) return
-        finishedChunk._count = count
         self.emit('data', finishedChunk)
       })
       lastChunk = currentChunk
@@ -69,7 +66,7 @@ MCA2JSON.prototype.convert = function(buf, regionX, regionZ) {
     }
     self.chunks[chunkIDX].voxels[idx] = block.id
   }
-  var opts = {ymin: 0, onVoxel: onVoxel, onChunk: onChunk }
+  var opts = {ymin: 0, onVoxel: onVoxel }
   var mcaReader = mca(region, opts)
   var distance = this.opts.distance || 1
   if (this.opts.start) {
